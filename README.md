@@ -1,16 +1,37 @@
-# yala_app
+# Yala app
 
-A new Flutter project.
 
-## Getting Started
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Yala is an educational complement for pre-university students
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Screenshots
+
+|     |     |    |
+| :-: | :-: |:-: |
+|  In development | In development | In development |
+| <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> |
+
+## Why flutter?
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--fNF5kHce--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/j0nesadfz9fifxyd15mr.gif)
+
+## Installation
+
+To run this project on your own, do the following: 
+1. Clone this project.
+2. Run `flutter pub get`.
+3. Run the project using `flutter run` or using your IDE's tools.
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[License MIT](https://choosealicense.com/licenses/mit/)
