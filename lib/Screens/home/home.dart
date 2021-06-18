@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/constants.dart';
+import 'package:yala_app/models/LearningType.dart';
+
+import 'Components/options_home.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -77,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      body: OptionsHome(),
     );
   }
 }
