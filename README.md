@@ -10,9 +10,10 @@ Yala is an educational complement for pre-university students
 
 |     |     |    |
 | :-: | :-: |:-: |
+|  Drawer List | Home Screen | In development |
+| <img src="./assets/toReadme/drawer.gif" height="300" /> | <img src="./assets/toReadme/home.gif" height="300" /> | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> |
 |  In development | In development | In development |
 | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q_2oTDPt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://mariacorpeno.com/wp-content/uploads/2020/09/catcoffee.gif" height="300" /> |
-
 ## Why flutter?
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--fNF5kHce--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/j0nesadfz9fifxyd15mr.gif)
