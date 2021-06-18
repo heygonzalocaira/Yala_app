@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yala_app/Screens/home/Components/button_bar.dart';
+import 'package:yala_app/Screens/Components/button_bar.dart';
+import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -75,24 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class YalaLogo extends StatelessWidget {
-  const YalaLogo({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      alignment: Alignment.center,
-      child: Image.asset(
-        "assets/images/yala_name.png",
-        fit: BoxFit.fill,
       ),
     );
   }
