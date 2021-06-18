@@ -20,7 +20,7 @@ class ButtonNavVar extends StatelessWidget {
           topRight: Radius.circular(25.0),
         ),
       ),
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 3.5),
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 3.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
