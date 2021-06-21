@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:yala_app/Screens/Components/nav_icon.dart';
-import 'package:yala_app/Screens/home/home.dart';
 
 import '../../constants.dart';
 

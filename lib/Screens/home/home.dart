@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/constants.dart';
-import 'package:yala_app/models/LearningType.dart';
 
 import 'Components/options_home.dart';
 
