@@ -1,6 +1,6 @@
 class Profile {
   String img;
-  String img_background;
+  String imgBackground;
 
   String name;
   String mail;
@@ -8,16 +8,16 @@ class Profile {
 
   Profile({
     this.img,
-    this.img_background,
+    this.imgBackground,
     this.name,
     this.mail,
     this.description,
   });
 }
 
-var userProfile = Profile(
+var userInfo = Profile(
   img: "https://www.eldinamo.cl/wp-content/uploads/2019/06/jordi.jpg",
-  img_background: "https://cdn.forbes.com.mx/2014/11/1.-Harvard.jpg",
+  imgBackground: "https://cdn.forbes.com.mx/2014/11/1.-Harvard.jpg",
   name: "Bill Gates",
   mail: "billy@gmail.com",
   description:

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
+import 'package:yala_app/Screens/Task/Components/text_container.dart';
 import 'package:yala_app/constants.dart';
 import 'package:yala_app/models/ProfileInfo.dart';
+
+import 'Components/image_circle_shape.dart';
+import 'Components/trophy_image.dart';
+import 'Components/user_information.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -80,31 +85,94 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       body: ListView(
         children: [
-          ImageCircleShape(
-            img: userProfile.img,
+          Container(
+            height: 230,
+            child: Stack(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 180,
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      fit: BoxFit.fitWidth,
+                      image: NetworkImage(userInfo.imgBackground),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: ImageCircleShape(
+                    img: userInfo.img,
+                    size: 180,
+                  ),
+                )
+              ],
+            ),
+          ),
+          UserInformation(),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: kDefaultPadding,
+                right: kDefaultPadding,
+                bottom: kDefaultPadding),
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
+                color: Colors.white.withOpacity(0.5),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextContainer(
+                    text: "Logros",
+                    sizePadding: kDefaultPadding * 0.8,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(kDefaultPadding * 0.5),
+                    child: Row(
+                      children: [
+                        TrophyImage(),
+                        TrophyImage(),
+                        TrophyImage(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: kDefaultPadding,
+                right: kDefaultPadding,
+                bottom: kDefaultPadding),
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
+                color: Colors.white.withOpacity(0.5),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextContainer(
+                    text: "Ranking",
+                    sizePadding: kDefaultPadding * 0.8,
+                  ),
+                  TextContainer(
+                    text: "10014",
+                    sizePadding: kDefaultPadding * 0.8,
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class ImageCircleShape extends StatelessWidget {
-  const ImageCircleShape({
-    Key key,
-    @required this.img,
-  }) : super(key: key);
-  final String img;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 150.0,
-      decoration: new BoxDecoration(
-        shape: BoxShape.circle,
-        image: new DecorationImage(
-          fit: BoxFit.fitHeight,
-          image: NetworkImage(img),
-        ),
       ),
     );
   }
