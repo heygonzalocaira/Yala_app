@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yala_app/Screens/Components/nav_icon.dart';
+import 'package:yala_app/Screens/Profile/profile.dart';
 import 'package:yala_app/Screens/Task/task_screen.dart';
 import 'package:yala_app/Screens/home/home.dart';
 
@@ -40,7 +41,9 @@ class ButtonNavVar extends StatelessWidget {
           ),
           NavIcon(
             iconNav: Icons.account_circle_sharp,
-            tap: () {},
+            tap: () {
+              Get.to(() => ProfileScreen());
+            },
           ),
         ],
       ),
