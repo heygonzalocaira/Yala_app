@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:yala_app/models/LearningType.dart';
 
+import 'button_home.dart';
+
 class OptionsHome extends StatelessWidget {
   const OptionsHome({
     Key key,
@@ -18,49 +20,41 @@ class OptionsHome extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             child: Column(
               children: [
-                ...List.generate(
-                  listOptions.length,
-                  (index) {
-                    return GestureDetector(
-                      onTap: () {
-                        print("ah prro");
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.5),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  listOptions[index].text,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 24.0,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                  height: 180,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(15),
-                                        bottomRight: Radius.circular(15)),
-                                  ),
-                                  child: Image.asset(listOptions[index].img,
-                                      fit: BoxFit.fitWidth)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
+                GestureDetector(
+                  onTap: () {
+                    print("ah prro");
                   },
+                  child: ButtonHome(
+                    text: listOptions[0].text,
+                    img: listOptions[0].img,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print("ah prro1");
+                  },
+                  child: ButtonHome(
+                    text: listOptions[1].text,
+                    img: listOptions[1].img,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print("ah prro2");
+                  },
+                  child: ButtonHome(
+                    text: listOptions[2].text,
+                    img: listOptions[2].img,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print("ah prro3");
+                  },
+                  child: ButtonHome(
+                    text: listOptions[3].text,
+                    img: listOptions[3].img,
+                  ),
                 ),
               ],
             ),
