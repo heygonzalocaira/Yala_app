@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/Screens/Task/Components/text_container.dart';
+import 'package:yala_app/Screens/Components/title_appbar.dart';
 import 'package:yala_app/constants.dart';
 import 'package:yala_app/models/ProfileInfo.dart';
 
@@ -28,7 +29,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       bottomNavigationBar: ButtonNavVar(),
       appBar: AppBar(
-        title: YalaLogo(),
+        centerTitle: true,
+        title: TitleAppBar(
+          text: "Perfil",
+          size: 25,
+        ),
         backgroundColor: kPrimaryColor,
       ),
       drawer: SafeArea(

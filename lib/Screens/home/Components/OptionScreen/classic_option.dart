@@ -3,15 +3,12 @@ import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/constants.dart';
 
-import 'Components/task_item.dart';
-import '../Components/title_appbar.dart';
-
-class TaskScreen extends StatefulWidget {
+class ClassicOptionScreen extends StatefulWidget {
   @override
-  _TaskScreenState createState() => _TaskScreenState();
+  _ClassicOptionScreenState createState() => _ClassicOptionScreenState();
 }
 
-class _TaskScreenState extends State<TaskScreen> {
+class _ClassicOptionScreenState extends State<ClassicOptionScreen> {
   int _selectedDestination = 0;
 
   void selectDestination(int index) {
@@ -25,11 +22,7 @@ class _TaskScreenState extends State<TaskScreen> {
     return Scaffold(
       bottomNavigationBar: ButtonNavVar(),
       appBar: AppBar(
-        centerTitle: true,
-        title: TitleAppBar(
-          text: "Tareas",
-          size: 25,
-        ),
+        title: YalaLogo(),
         backgroundColor: kPrimaryColor,
       ),
       drawer: SafeArea(
@@ -84,24 +77,9 @@ class _TaskScreenState extends State<TaskScreen> {
           ),
         ),
       ),
-      body: ListView(
-        children: [
-          TaskItem(
-            text1: "Tareas Diarias",
-            text2: "Responder 25 preguntas",
-            text3: "Gana x5",
-          ),
-          TaskItem(
-            text1: "Tareas Semanal",
-            text2: "Quedar entre los 100 primeros en un ranking general",
-            text3: "Gana x50",
-          ),
-          TaskItem(
-            text1: "Tareas Mensual",
-            text2: "Realizar un éxamen simulacro",
-            text3: "Gana x100",
-          ),
-        ],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [],
       ),
     );
   }
