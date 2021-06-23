@@ -78,8 +78,142 @@ class _ClassicOptionScreenState extends State<ClassicOptionScreen> {
         ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [],
+        //crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(kDefaultPadding * 0.8),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.5),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(25),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(kDefaultPadding * 0.5),
+                    child: Center(
+                      child: TextWhite(
+                        text: "Partida Clasica",
+                        size: 24,
+                        padding: kDefaultPadding * 0.1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              WhiteDivider(),
+              TextWhite(
+                text: "Pregunta A",
+                size: 18,
+                padding: kDefaultPadding * 0.5,
+              ),
+              Container(
+                child: TextWhite(
+                  text: "¿Qué año llegó Cristóbal\n Colón a América?",
+                  size: 24,
+                  padding: kDefaultPadding * 0.8,
+                ),
+              ),
+              WhiteDivider(),
+              //Container(
+              //  height: 400,
+              //  child: GridView.count(
+              //    primary: false,
+              //    padding: const EdgeInsets.all(20),
+              //    crossAxisSpacing: 10,
+              //    mainAxisSpacing: 10,
+              //    crossAxisCount: 2,
+              //    children: <Widget>[
+              //      Container(
+              //        height: 300,
+              //        padding: const EdgeInsets.all(kDefaultPadding * 0.5),
+              //        decoration: BoxDecoration(
+              //            color: Colors.white.withOpacity(0.5),
+              //            borderRadius: BorderRadius.all(Radius.circular(15))),
+              //        child: Column(
+              //          children: [
+              //            Row(
+              //              mainAxisAlignment: MainAxisAlignment.center,
+              //              children: [
+              //                TextWhite(
+              //                    text: "a)",
+              //                    size: 18,
+              //                    padding: kDefaultPadding * 0.5),
+              //                Container(
+              //                  width: MediaQuery.of(context).size.width * 0.28,
+              //                  child: TextWhite(
+              //                      text:
+              //                          "La fecha en la Cristóbal Colón llegó a América es en 1495.",
+              //                      size: 15,
+              //                      padding: kDefaultPadding * 0.5),
+              //                ),
+              //              ],
+              //            ),
+              //            Image.network(
+              //                "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg"),
+              //          ],
+              //        ),
+              //      ),
+              //      Container(
+              //        height: 300,
+              //        padding: const EdgeInsets.all(8),
+              //        child: const Text('Heed not the rabble'),
+              //        color: Colors.green.withOpacity(0.2),
+              //      ),
+              //    ],
+              //  ),
+              //),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class WhiteDivider extends StatelessWidget {
+  const WhiteDivider({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: kDefaultPadding,
+        right: kDefaultPadding,
+      ),
+      child: Divider(
+        color: Colors.white,
+        height: 1,
+        thickness: 1,
+      ),
+    );
+  }
+}
+
+class TextWhite extends StatelessWidget {
+  const TextWhite({
+    Key key,
+    @required this.text,
+    @required this.size,
+    @required this.padding,
+  }) : super(key: key);
+  final String text;
+  final double size;
+  final double padding;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: size,
+          color: Colors.white,
+        ),
       ),
     );
   }
