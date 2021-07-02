@@ -3,9 +3,9 @@ import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/constants.dart';
 
-import '../option_information.dart';
-import '../text_white.dart';
-import '../white_divider.dart';
+import 'Components/option_information.dart';
+import 'Components/text_white.dart';
+import 'Components/white_divider.dart';
 
 class ClassicOptionScreen extends StatefulWidget {
   @override
