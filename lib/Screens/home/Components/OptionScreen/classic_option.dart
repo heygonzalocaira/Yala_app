@@ -117,56 +117,67 @@ class _ClassicOptionScreenState extends State<ClassicOptionScreen> {
                 ),
               ),
               WhiteDivider(),
-              //Container(
-              //  height: 400,
-              //  child: GridView.count(
-              //    primary: false,
-              //    padding: const EdgeInsets.all(20),
-              //    crossAxisSpacing: 10,
-              //    mainAxisSpacing: 10,
-              //    crossAxisCount: 2,
-              //    children: <Widget>[
-              //      Container(
-              //        height: 300,
-              //        padding: const EdgeInsets.all(kDefaultPadding * 0.5),
-              //        decoration: BoxDecoration(
-              //            color: Colors.white.withOpacity(0.5),
-              //            borderRadius: BorderRadius.all(Radius.circular(15))),
-              //        child: Column(
-              //          children: [
-              //            Row(
-              //              mainAxisAlignment: MainAxisAlignment.center,
-              //              children: [
-              //                TextWhite(
-              //                    text: "a)",
-              //                    size: 18,
-              //                    padding: kDefaultPadding * 0.5),
-              //                Container(
-              //                  width: MediaQuery.of(context).size.width * 0.28,
-              //                  child: TextWhite(
-              //                      text:
-              //                          "La fecha en la Cristóbal Colón llegó a América es en 1495.",
-              //                      size: 15,
-              //                      padding: kDefaultPadding * 0.5),
-              //                ),
-              //              ],
-              //            ),
-              //            Image.network(
-              //                "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg"),
-              //          ],
-              //        ),
-              //      ),
-              //      Container(
-              //        height: 300,
-              //        padding: const EdgeInsets.all(8),
-              //        child: const Text('Heed not the rabble'),
-              //        color: Colors.green.withOpacity(0.2),
-              //      ),
-              //    ],
-              //  ),
-              //),
+              Container(
+                height: 400,
+                child: GridView.count(
+                  primary: false,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: 2,
+                  children: <Widget>[
+                    OptionInformation(),
+                  ],
+                ),
+              ),
             ],
           )
+        ],
+      ),
+    );
+  }
+}
+
+class OptionInformation extends StatelessWidget {
+  const OptionInformation({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 300,
+      decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.5),
+          borderRadius: BorderRadius.all(Radius.circular(15))),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextWhite(text: "a)", size: 18, padding: kDefaultPadding * 0.5),
+              Container(
+                width: MediaQuery.of(context).size.width * 0.28,
+                child: TextWhite(
+                    text:
+                        "La fecha en la Cristóbal Colón llegó a América es en 1495.",
+                    size: 15,
+                    padding: kDefaultPadding * 0.5),
+              ),
+            ],
+          ),
+          Container(
+            height: 60,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.fitWidth,
+                image: NetworkImage(
+                    "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg"),
+              ),
+            ),
+          ),
+          //Image.network(
+          //    "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg"),
         ],
       ),
     );
