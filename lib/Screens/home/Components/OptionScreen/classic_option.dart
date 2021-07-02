@@ -3,6 +3,10 @@ import 'package:yala_app/Screens/Components/button_bar.dart';
 import 'package:yala_app/Screens/Components/yala_logo.dart';
 import 'package:yala_app/constants.dart';
 
+import '../option_information.dart';
+import '../text_white.dart';
+import '../white_divider.dart';
+
 class ClassicOptionScreen extends StatefulWidget {
   @override
   _ClassicOptionScreenState createState() => _ClassicOptionScreenState();
@@ -126,105 +130,40 @@ class _ClassicOptionScreenState extends State<ClassicOptionScreen> {
                   mainAxisSpacing: 10,
                   crossAxisCount: 2,
                   children: <Widget>[
-                    OptionInformation(),
+                    OptionInformation(
+                      letter: "a)",
+                      text:
+                          "La fecha en la Cristóbal Colón llegó a América es en 1495.",
+                      imgNet:
+                          "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg",
+                    ),
+                    OptionInformation(
+                      letter: "b)",
+                      text:
+                          "La fecha en la Cristóbal Colón llegó a América es en 1495.",
+                      imgNet:
+                          "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg",
+                    ),
+                    OptionInformation(
+                      letter: "c)",
+                      text:
+                          "La fecha en la Cristóbal Colón llegó a América es en 1495.",
+                      imgNet:
+                          "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg",
+                    ),
+                    OptionInformation(
+                      letter: "d)",
+                      text:
+                          "La fecha en la Cristóbal Colón llegó a América es en 1495.",
+                      imgNet:
+                          "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg",
+                    ),
                   ],
                 ),
               ),
             ],
           )
         ],
-      ),
-    );
-  }
-}
-
-class OptionInformation extends StatelessWidget {
-  const OptionInformation({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.5),
-          borderRadius: BorderRadius.all(Radius.circular(15))),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextWhite(text: "a)", size: 18, padding: kDefaultPadding * 0.5),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.28,
-                child: TextWhite(
-                    text:
-                        "La fecha en la Cristóbal Colón llegó a América es en 1495.",
-                    size: 15,
-                    padding: kDefaultPadding * 0.5),
-              ),
-            ],
-          ),
-          Container(
-            height: 60,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.fitWidth,
-                image: NetworkImage(
-                    "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg"),
-              ),
-            ),
-          ),
-          //Image.network(
-          //    "https://img2.rtve.es/i/?w=1600&i=1589899238129.jpg"),
-        ],
-      ),
-    );
-  }
-}
-
-class WhiteDivider extends StatelessWidget {
-  const WhiteDivider({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: kDefaultPadding,
-        right: kDefaultPadding,
-      ),
-      child: Divider(
-        color: Colors.white,
-        height: 1,
-        thickness: 1,
-      ),
-    );
-  }
-}
-
-class TextWhite extends StatelessWidget {
-  const TextWhite({
-    Key key,
-    @required this.text,
-    @required this.size,
-    @required this.padding,
-  }) : super(key: key);
-  final String text;
-  final double size;
-  final double padding;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(padding),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: size,
-          color: Colors.white,
-        ),
       ),
     );
   }
